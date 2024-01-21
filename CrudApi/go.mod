@@ -1,4 +1,4 @@
-module golang-project
+module crudapi
 
 go 1.21.6
 

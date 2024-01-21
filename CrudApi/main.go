@@ -1,13 +1,13 @@
 package main
 
 import (
-	"math/rand"
 	"encoding/json"
 	"fmt"
+	"github.com/gorilla/mux"
 	"log"
+	"math/rand"
 	"net/http"
 	"strconv"
-	"github.com/gorilla/mux"
 )
 
 type Movie struct {
