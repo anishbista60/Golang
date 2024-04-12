@@ -41,7 +41,7 @@ func main(){
 		}
 	}else{
 			if !isvalidname{
-				fmt.Println(" The character of First name or last name you entered is less than 3")
+				fmt.Println(" The character of First Name or last name you entered is less than 3")
 			}
 			if !isvalidemail{
 				fmt.Println(" The email you entered doesn't contain @ sign")
