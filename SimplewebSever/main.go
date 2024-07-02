@@ -31,10 +31,6 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func formHandler(w http.ResponseWriter, r *http.Request) {
-    if r.Method != http.MethodPost {
-        http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
-        return
-    }
     if err := r.ParseForm(); err != nil {
         fmt.Fprintf(w, "ParseForm() err: %v", err)
         return
