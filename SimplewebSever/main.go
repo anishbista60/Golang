@@ -24,14 +24,14 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
     if r.Method != "GET" {
-        http.Error(w, "method is not supported", http.StatusNotFound)
+        http.Error(w, "method is not supported", http.StatusMethodNotAllowed)
         return
     }
     fmt.Fprintf(w, "hello!, Nice you make it perfect")
 }
 
 func formHandler(w http.ResponseWriter, r *http.Request) {
-    if r.Method != "POST" {
+    if r.Method != http.MethodPost {
         http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
         return
     }
