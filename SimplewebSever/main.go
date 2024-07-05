@@ -35,23 +35,12 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
         fmt.Fprintf(w, "ParseForm() err: %v", err)
         return
     }
-    fmt.Fprintf(w, "Post request successful done\n")
-    name := r.FormValue("name")
-    email := r.FormValue("email")
-    age := r.FormValue("age")
-    gender := r.FormValue("gender")
-    message := r.FormValue("message")
-    subscribe := r.FormValue("subscribe")
-
-    fmt.Fprintf(w, "Name: %s\n", name)
-    fmt.Fprintf(w, "Email: %s\n", email)
-    fmt.Fprintf(w, "Age: %s\n", age)
-    fmt.Fprintf(w, "Gender: %s\n", gender)
-    fmt.Fprintf(w, "Message: %s\n", message)
-
-    subscribeText := "Not Subscribed"
-    if subscribe == "on" {
-        subscribeText = "Subscribed"
-    }
-    fmt.Fprintf(w, "Subscribe: %s\n", subscribeText)
+    fmt.Fprintf(w, "Post request successful\n")
+    
+    firstname := r.FormValue("firstname")
+    lastname := r.FormValue("lastname")
+    
+    fmt.Fprintf(w, "First Name: %s\n", firstname)
+    fmt.Fprintf(w, "Last Name: %s\n", lastname)
 }
+
